@@ -1,0 +1,92 @@
+/*====HORÁRIOS PÁGINA====*/
+
+h3{
+  margin-bottom: 20px;
+}
+
+.especializacoes{
+  padding: 20px;
+  text-align: center;
+}
+.especializacoes h2{
+  margin-top: 30px;
+}
+.especialidades{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  text-align: center;
+}
+.especialidades a{
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid #00CAD1;
+  margin: 10px;
+}
+.especialidades a:hover{
+  color: #0C6E71;
+}
+
+
+
+.horarios{
+  display: flex;
+  height: 240px;
+  padding: 0 20px;
+  margin: 20px 0;
+}
+.horarios img{
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tabela-especialidade{
+  border-spacing: 0;
+  text-align: left;
+  width: 70%;
+  height: 100%;
+}
+.tabela-especialidade thead tr{
+  color: white;
+  background-color: #00CAD1;
+  text-align: start;
+}
+.tabela-especialidade tr{
+  background-color: #f1f1f1;
+  color: #585757;
+  font-weight: 500;
+}
+.tabela-especialidade tbody tr:nth-of-type(2n+1){
+  background-color: #cdcdcd;
+  border: 1px solid #f1f1f1;
+}
+.tabela-especialidade th, .tabela-especialidade td{
+  padding: 10px;
+}
+
+/*=============RESPONSIVO=============*/
+@media (max-width: 768px){
+  .especialidades{
+    margin-top: 80px;
+  }
+
+  .horarios img{
+    display: none;
+  }
+  .horarios{
+    height: auto;
+    justify-content: center;
+  }
+  .tabela-especialidade{
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px){
+  .horarios{
+    padding: 0;
+  }
+}

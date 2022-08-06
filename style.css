@@ -1,0 +1,205 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+main{
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: white;
+  width: 100%;
+}
+.wrap{
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.content{
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*===============HEADER===============*/
+header{
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  min-height: 60px;
+  padding: 5px 0;
+  width: 100%;
+  background-color: #00CAD1;
+  z-index: 1;
+}
+header a{
+  margin: 0 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+header a:hover{
+  color: black;
+}
+
+.logo{
+  height: 60px;
+}
+
+#banner{
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url("assets/recepcao.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 30px;
+}
+.banner-text{
+  display: flex;
+  align-items: center;
+  font-size: 38px;
+  color: white;
+
+  height: 100%;
+  padding: 10px;
+  margin: 0;
+}
+
+/*===============CORPO===============*/
+.info h2{
+  color: gray;
+}
+
+h3{
+  margin-top: 50px;
+  text-transform: uppercase;
+}
+
+.info{
+  color: rgb(168, 161, 161);
+  text-align: center;
+}
+
+.sobre{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.lista{
+  color: rgb(168, 161, 161);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/*===============ESPECIALIDADES===============*/
+.classes{
+  display: flex;
+  flex: row wrap;
+}
+
+.classe{
+  border-radius: 3px;
+  box-shadow: 0 1px 10px rgb(0 0 0 / 50%);
+  margin: 20px;
+  width: calc(100% / 3 - 30px);
+}
+.classe img{
+  width: 100%;
+}
+.classe figcaption{
+  color: rgb(168, 161, 161);
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+/*===============HORÁRIOS===============*/
+.link-horarios{
+  text-align: center;
+  margin-top: 20px;
+}
+.button{
+  color: white;
+  background-color: #00CAD1;
+
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+
+  padding: 8px 3px;
+}
+
+/*===============CONTATOS===============*/
+#contatos p{
+  line-height: 32px;
+}
+
+/*===============FOOTER===============*/
+footer{
+  background-color: #0C6E71;
+  color: white;
+
+  line-height: 32px;
+  text-align: center;
+
+  padding: 20px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+/*===============RESPONSIVO===============*/
+@media (max-width: 425px){
+  
+  header{
+    flex-direction: column;
+  }
+  nav{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    padding: 8px;
+    border-top: 1px solid #05C0CB;
+  }
+  header a{
+    font-size: 12px;
+  }
+  
+  #banner{
+    height: 200px;
+  }
+  .banner-text{
+    padding-top: 80px;
+    font-size: 15px;
+  }
+
+  .medico-sorridente{
+    display: none;
+  }
+
+  .classes{
+    flex-wrap: wrap;
+  }
+  .classe{
+    width: 100%;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px){
+  #banner{
+    height: 300px;
+  }
+
+  .medico-sorridente{
+    display: none;
+  }
+
+  .classes{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .classe{
+    width: calc(100% / 3);
+  }
+}
